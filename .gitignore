@@ -1,0 +1,22 @@
+# Virtual environment
+venv/
+__pycache__/
+*.pyc
+
+# Environment variables
+.env
+
+# Database files
+db.sqlite3
+
+# Django static files
+/staticfiles/
+/media/
+
+# VSCode / IDE
+.vscode/
+.idea/
+
+# Node / Frontend (if accidentally added)
+node_modules/
+package*.json
