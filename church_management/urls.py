@@ -39,6 +39,8 @@ schema_view = get_schema_view(
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('members.urls')),
+    path('api/', include('attendance.urls')),
+    path('api/', include('giving.urls')),
 
     # Use the custom views instead of the library classes directly
     path('api/token/', CustomTokenObtainPairView.as_view(), name='token_obtain_pair'),

@@ -40,7 +40,10 @@ INSTALLED_APPS = [
     'rest_framework',
     'corsheaders',
     'members',
-    'drf_yasg'
+    'drf_yasg',
+    'attendance',
+    'giving',
+
 ]
 
 MIDDLEWARE = [

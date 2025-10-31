@@ -27,3 +27,18 @@ class MemberProfileSerializer(serializers.ModelSerializer):
             'status': {'help_text': 'Active, inactive, or transferred.'},
             'category': {'help_text': 'Member category (visitor, member, staff, volunteer).'},
         }
+
+from rest_framework import serializers
+from .models import User, MemberProfile
+
+class RegisterSerializer(serializers.Serializer):
+    """Serializer used for user registration endpoint."""
+    user = UserSerializer()
+    profile = MemberProfileSerializer()
+
+    def create(self, validated_data):
+        user_data = validated_data.pop('user')
+        profile_data = validated_data.pop('profile', {})
+        user = User.objects.create(**user_data)
+        MemberProfile.objects.create(user=user, **profile_data)
+        return user
