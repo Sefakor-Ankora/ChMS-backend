@@ -126,3 +126,8 @@ MIT License © 2025 Sefakor(https://github.com/Sefakor-Ankora)
 
 
 
+### ✅ Recent Updates
+- Added `/api/register/` endpoint for user registration  
+- Added `/api/attendance/` endpoint for attendance tracking  
+- Added `/api/giving/` endpoint for tithes and donations  
+- Improved Swagger documentation for all endpoints
