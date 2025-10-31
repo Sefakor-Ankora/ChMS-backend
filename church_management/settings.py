@@ -43,6 +43,10 @@ INSTALLED_APPS = [
     'drf_yasg',
     'attendance',
     'giving',
+    'events',
+    'reports',
+
+
 
 ]
 

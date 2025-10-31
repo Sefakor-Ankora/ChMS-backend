@@ -41,6 +41,9 @@ urlpatterns = [
     path('api/', include('members.urls')),
     path('api/', include('attendance.urls')),
     path('api/', include('giving.urls')),
+    path('api/', include('events.urls')),
+    path('api/', include('reports.urls')),
+
 
     # Use the custom views instead of the library classes directly
     path('api/token/', CustomTokenObtainPairView.as_view(), name='token_obtain_pair'),
