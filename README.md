@@ -125,9 +125,51 @@ Authorization: Bearer <access_token>
 MIT License © 2025 Sefakor(https://github.com/Sefakor-Ankora)
 
 
+---
 
-### ✅ Recent Updates
-- Added `/api/register/` endpoint for user registration  
-- Added `/api/attendance/` endpoint for attendance tracking  
-- Added `/api/giving/` endpoint for tithes and donations  
-- Improved Swagger documentation for all endpoints
+## 📘 API Endpoints Overview
+
+Below is the complete list of active API endpoints for the **Church Management System (ChMS)** backend.
+
+---
+
+### 🔐 Authentication
+
+| Feature | Method | Endpoint | Description |
+|----------|---------|----------|--------------|
+| Login | `POST` | `/api/token/` | Obtain JWT access and refresh tokens |
+| Refresh Token | `POST` | `/api/token/refresh/` | Refresh access token |
+| Register | `POST` | `/api/register/` | Create new user and member profile |
+
+---
+
+### 👥 Members
+
+| Method | Endpoint | Description |
+|---------|-----------|-------------|
+| `GET` | `/api/members/` | Retrieve all member profiles |
+| `POST` | `/api/members/` | Add a new member |
+| `GET` | `/api/members/{id}/` | Retrieve single member details |
+| `PUT` | `/api/members/{id}/` | Update a member record |
+| `DELETE` | `/api/members/{id}/` | Delete a member record |
+
+---
+
+### 🗓️ Attendance
+
+| Method | Endpoint | Description |
+|---------|-----------|-------------|
+| `GET` | `/api/attendance/` | List all attendance records |
+| `POST` | `/api/attendance/` | Record a member's attendance |
+| `GET` | `/api/attendance/{id}/` | Retrieve a single attendance record |
+| `PUT` | `/api/attendance/{id}/` | Update attendance record |
+| `DELETE` | `/api/attendance/{id}/` | Delete an attendance record |
+
+**Example Request:**
+```json
+{
+  "member": 1,
+  "event_type": "service",
+  "present": true,
+  "remarks": "Attended main service"
+}
